@@ -1,27 +1,32 @@
 ---
-import "../styles/global.css";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-
-const pageTitle = "Página de inicio";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const allPosts = await Astro.glob('../posts/*.md');
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+const pageTitle = "Índice de etiquetas";
 ---
+<BaseLayout pageTitle={pageTitle}>
+  <div class="tags">
+    {tags.map((tag) => (
+      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+    ))}
+  </div>
+</BaseLayout>
+<style>
+  a {
+    color: #00539F;
+  }
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Header />
-    <h1>{pageTitle}</h1>
-    <Footer />
-    <script>
-      document.querySelector('.hamburger').addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.toggle('expanded');
-      });
-    </script>
-  </body>
-</html>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    margin: 0.25em;
+    border: dotted 1px #a1a1a1;
+    border-radius: .5em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+    background-color: #F8FCFD;
+  }
+</style>

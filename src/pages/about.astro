@@ -1,27 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const pageTitle = "Sobre mi";
+const pageTitle = "About Me";
 
 const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Escritor técnico",
-  hobbies: ["fotografia", "observación de aves", "peñarol"],
+  firstName: "Duban Miguel Páez",
+  country: "Alemania",
+  occupation: "desempleado",
+  hobbies: ["leer", "montar largos trayectos en bicicleta", "videojuegos"],
 };
 
-const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Astro",
-  "Redacción de documentos",
-];
+const skills = ["HTML", "CSS", "JavaScript", "python"];
 
-const happy = true;
-const finished = false;
-const goal = 3;
+const status = true;
+const secondStatus = false;
 
 const skillColor = "navy";
 const fontWeight = "bold";
@@ -32,32 +24,44 @@ const textCase = "uppercase";
   <style define:vars={{ skillColor, fontWeight, textCase }}>
     /* pasa el parametro de una variable declarada en 
     frontmatter */
-    h1 {
-      color: purple;
-      font-size: 4rem;
+    body {
+      margin: 0 319px 0 319px;
     }
-
     .skill {
       color: var(--skillColor); /* llama a la variable */
       font-weight: var(--fontWeight); /* llama a la variable */
       text-transform: var(--textCase); /* llama a la variable */
     }
   </style>
-  <h1>{pageTitle}</h1>
-  <h2>... ¡y mi nuevo sitio Astro!</h2>
+
   <p>
-    Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda
-    página de mi sitio web, ¡y es la primera que he construido yo mismo!
+      Here I am, after a lot of procrastination, frustration, attempts, and
+      disappointments (though not romantic ones), diving into what has been, up
+      until now, my unfulfilled dream of becoming a programmer. I’ve decided to
+      create this personal blog to document my progress in the world of IT and,
+      perhaps, to share a bit of my personal side as well. In addition, I want
+      to share with you, dear reader, that while my frustration may not be
+      greater than my determination, I promise, with complete confidence, that I
+      will achieve my goal of working in what I truly love.
   </p>
 
   <p>
-    Este sitio se irá actualizando a medida que vaya completando más partes del
-    tutorial, ¡así que no dejes de visitarlo para ver cómo va mi viaje!
+    "La vida es una comedia para quienes piensan y una tragedia para quienes
+    sienten"
+  </p>
+  <p>
+    Maybe the translation is: Life is a comedy for those who think and a tragedy
+    for those who feel.
   </p>
   <p>He aquí algunos datos sobre mí:</p>
   <ul>
     <li>Me llamo {identity.firstName}.</li>
-    <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
+    <li>
+      Vivo en {identity.country}
+      {secondStatus && <span> y soy</span>}
+      {status && <span> y estoy</span>}
+      {identity.occupation}.
+    </li>
     {
       identity.hobbies.length >= 2 && (
         <li>
@@ -71,15 +75,4 @@ const textCase = "uppercase";
   <ul>
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
-  {happy && <p>¡Estoy feliz de aprender Astro!</p>}
-
-  {finished && <p>¡He terminado este tutorial!</p>}
-
-  {
-    goal === 3 ? (
-      <p>Mi objetivo es terminar en 3 días.</p>
-    ) : (
-      <p>Mi objetivo no son 3 días.</p>
-    )
-  }
 </BaseLayout>

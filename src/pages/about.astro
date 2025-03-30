@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const pageTitle = "About Me";
+const pageTitle = "Sobre mi";
 
 const identity = {
   firstName: "Duban Miguel Páez",
@@ -10,7 +10,7 @@ const identity = {
   hobbies: ["leer", "montar largos trayectos en bicicleta", "videojuegos"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "python"];
+const skills = ["HTML", "CSS", "JavaScript", "Python"];
 
 const status = true;
 const secondStatus = false;
@@ -24,9 +24,6 @@ const textCase = "uppercase";
   <style define:vars={{ skillColor, fontWeight, textCase }}>
     /* pasa el parametro de una variable declarada en 
     frontmatter */
-    body {
-      margin: 0 319px 0 319px;
-    }
     .skill {
       color: var(--skillColor); /* llama a la variable */
       font-weight: var(--fontWeight); /* llama a la variable */
@@ -71,7 +68,7 @@ const textCase = "uppercase";
       )
     }
   </ul>
-  <p>Mis habilidades son:</p>
+<p>Mis habilidades son:</p>
   <ul>
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>

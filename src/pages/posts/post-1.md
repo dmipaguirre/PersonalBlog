@@ -1,22 +1,22 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Mi primera publicación en el blog"
-description: "Este es la primera publicación de mi nuevo blog Astro."
-author: "Alumno de Astro"
+description: "Generando un trauma"
+author: "Duban Páez"
 image:
   url: "https://docs.astro.build/assets/full-logo-light.png"
   alt: "El logotipo completo de Astro."
-pubDate: 2022-07-01
+pubDate: 2025-03-25
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-¡Bienvenido a mi _nuevo blog_ sobre el aprendizaje de Astro! Aquí, voy a compartir mi viaje de aprendizaje a medida que construyo un nuevo sitio web.
+¡Bienvenido a mi _nuevo blog_! Aquí, compartiré un viaje de aprendizajes, anéctodas y diario vivir, a medida que construyo un nuevo sitio web.
 
-## Lo que he conseguido
+## Lo que he conseguido (¡muy poco, por ahora!)
 
-1. **Instalación de Astro**: En primer lugar, he creado un nuevo proyecto Astro y configurar mis cuentas en línea.
+1. **¿Quien soy?**: Bueno, pues simplemente soy una persona a la que le ha costado mucho progresar en la vida (no te des tan duro Miguel). Pero sí, mi mayor problema es la procastinación.
 
-2. **Creación de páginas**: Luego aprendí cómo hacer páginas creando nuevos archivos `.astro` y colocándolos en la carpeta `src/pages/`.
+2. **¿Qué hago en este momento?**: Estoy en el intento de sobrevivir, con poca experiencia en programación y el sueño de pertenecer en el mundo de las TI. A mis 35 años y aún no he podido tener mi primer experiencia como programador.
 
 3. **Creación de publicaciones**: ¡Esta es mi primera publicación! ¡Ahora tengo páginas de Astro y publicaciónes en Markdown!
 

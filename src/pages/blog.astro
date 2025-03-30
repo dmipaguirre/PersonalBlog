@@ -6,8 +6,8 @@ const pageTitle = "Blog";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>Mi blog de aprendizaje sobre Astro</h1>
-  <p>Aquí es donde publicaré acerca de mi viaje aprendiendo Astro.</p>
+  <h1>Notas de mi día a día</h1>
+  <p>Aquí es donde publicaré acerca de mi blog:</p>
   <ul>
       {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
   </ul>

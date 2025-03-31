@@ -2,12 +2,19 @@
 import Hamburger from "./Hamburger.astro";
 import Navigation from "./Navigation.astro";
 import Avatar from "./Avatar.astro";
+
+const isHome = Astro.url.pathname === "/";
 ---
 
+<style>
+  nav {
+    margin-bottom: 3rem;
+  }
+</style>
 <header>
   <nav>
     <Hamburger />
     <Navigation />
-    <Avatar />
+    {isHome && <Avatar />}
   </nav>
 </header>

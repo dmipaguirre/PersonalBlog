@@ -10,7 +10,7 @@ const identity = {
   hobbies: ["leer", "montar largos trayectos en bicicleta", "videojuegos"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "Python"];
+const skills = ["HTML", "CSS", "JavaScript", "Python", "Astro"];
 
 const status = true;
 const secondStatus = false;
@@ -52,8 +52,8 @@ const textCase = "uppercase";
   </p>
   <p>He aquí algunos datos sobre mí:</p>
   <ul>
-    <li class="skill">Me llamo {identity.firstName}.</li>
-    <li class="skill">
+    <li>Me llamo {identity.firstName}.</li>
+    <li>
       Vivo en {identity.country}
       {secondStatus && <span> y soy</span>}
       {status && <span> y estoy</span>}
@@ -61,7 +61,7 @@ const textCase = "uppercase";
     </li>
     {
       identity.hobbies.length >= 2 && (
-        <li class="skill">
+        <li>
           Dos de mis aficiones son: {identity.hobbies[0]} y{" "}
           {identity.hobbies[1]}
         </li>

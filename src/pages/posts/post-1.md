@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Mi primera publicación en el blog"
-description: "Generando un trauma"
+description: "Un trauma generado"
 author: "Duban Páez"
 image:
   url: "https://docs.astro.build/assets/full-logo-light.png"

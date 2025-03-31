@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const pageTitle = "Sobre mi";
+const pageTitle = "Sobre mí";
 
 const identity = {
   firstName: "Duban Miguel Páez",
@@ -15,7 +15,7 @@ const skills = ["HTML", "CSS", "JavaScript", "Python"];
 const status = true;
 const secondStatus = false;
 
-const skillColor = "navy";
+const skillColor = "white";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
@@ -52,8 +52,8 @@ const textCase = "uppercase";
   </p>
   <p>He aquí algunos datos sobre mí:</p>
   <ul>
-    <li>Me llamo {identity.firstName}.</li>
-    <li>
+    <li class="skill">Me llamo {identity.firstName}.</li>
+    <li class="skill">
       Vivo en {identity.country}
       {secondStatus && <span> y soy</span>}
       {status && <span> y estoy</span>}
@@ -61,7 +61,7 @@ const textCase = "uppercase";
     </li>
     {
       identity.hobbies.length >= 2 && (
-        <li>
+        <li class="skill">
           Dos de mis aficiones son: {identity.hobbies[0]} y{" "}
           {identity.hobbies[1]}
         </li>

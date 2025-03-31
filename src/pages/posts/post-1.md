@@ -14,7 +14,7 @@ tags: ["astro", "bloguear", "aprender en público"]
 
 ## Lo que he conseguido (¡muy poco, por ahora!)
 
-1. **¿Quien soy?**: Bueno, pues simplemente soy una persona a la que le ha costado mucho progresar en la vida (no te des tan duro Miguel). Pero sí, mi mayor problema es la procastinación.
+1. **¿Quien soy?**: Es una pregunta contenciosa y si fuera una pregunta de entrevista, abiertamente diría aquello que se dice en todas las entrevistas en las cuales uno trata de persuadir a una persona, es decir, me llamo Miguel, tengo 35 años........ y blablabla, toda una carreta. Sin embargo, tratemos de acercarnos a la realidad evitando sesgos y una verdad relativa.
 
 2. **¿Qué hago en este momento?**: Estoy en el intento de sobrevivir, con poca experiencia en programación y el sueño de pertenecer en el mundo de las TI. A mis 35 años y aún no he podido tener mi primer experiencia como programador.
 

@@ -1,28 +1,30 @@
 ---
 const { title, url } = Astro.props;
 ---
+
 <style>
-    li {
-        padding: 4px;
-    }
-    a {
-        color: aliceblue;
-        text-decoration: none;
-        position: relative;
-        padding-bottom: 2px;
-    }
-    a::after {
-        content: ""; /* Crea un elemento visual */
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0; /* Se inicia sin ancho */
-        height: 2px; /* Grosor de la línea */
-        background-color: aliceblue; /* Color de la línea */
-        transition: width 0.3s ease-in-out; /* Efecto de animación */
-    }
-    a:hover::after {
-        width: 100%; /* Se expande al pasar el mouse */
-    }
+  li {
+    padding: 4px;
+  }
+  a {
+    color: aliceblue;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 2px;
+  }
+  a::after {
+    content: ""; /* Crea un elemento visual */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* Se inicia sin ancho */
+    height: 2px; /* Grosor de la línea */
+    background-color: aliceblue; /* Color de la línea */
+    transition: width 0.3s ease-in-out; /* Efecto de animación */
+  }
+  a:hover::after {
+    width: 100%; /* Se expande al pasar el mouse */
+  }
 </style>
+
 <li><a href={url}>{title}</a></li>

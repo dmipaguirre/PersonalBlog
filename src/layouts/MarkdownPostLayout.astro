@@ -1,39 +1,51 @@
 ---
-import BaseLayout from './BaseLayout.astro';
+import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
+
 <BaseLayout pageTitle={frontmatter.title}>
   <p><em>{frontmatter.description}</em></p>
-  <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
+  <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
 
   <p>Escrito por: {frontmatter.author}</p>
-
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-
+  <!-- container para mostrar imagenes
+  <div class="img-container">
+    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+  </div>
+  -->
   <div class="tags">
-    {frontmatter.tags.map((tag) => (
-      <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
-    ))}
+    {
+      frontmatter.tags.map((tag) => (
+        <p class="tag">
+          <a href={`/tags/${tag}`}>{tag}</a>
+        </p>
+      ))
+    }
   </div>
 
   <slot />
 </BaseLayout>
 <style>
+  .img-container {
+    text-align: center;
+  }
   a {
-    color: #00539F;
+    color: #282f35;
   }
 
   .tags {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
 
   .tag {
     margin: 0.25em;
     border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
     font-size: 1.15em;
-    background-color: #F8FCFD;
+    background-color: #f8fcfd;
   }
 </style>

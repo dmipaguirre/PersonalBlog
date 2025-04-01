@@ -6,13 +6,13 @@ const pageTitle = "Sobre mí";
 const identity = {
   firstName: "Duban Miguel Páez",
   country: "Alemania",
-  occupation: "desempleado",
+  occupation: "buscando empleo",
   hobbies: ["leer", "montar largos trayectos en bicicleta", "videojuegos"],
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "Python", "Astro"];
 
-const status = true;
+const status = false;
 const secondStatus = false;
 
 const skillColor = "white";
@@ -30,34 +30,47 @@ const textCase = "uppercase";
       text-transform: var(--textCase); /* llama a la variable */
     }
   </style>
+  <!--
+  <p>
+    Here I am, after a lot of procrastination, frustration, attempts, and
+    disappointments (though not romantic ones), diving into what has been, up
+    until now, my unfulfilled dream of becoming a programmer. I’ve decided to
+    create this personal blog to document my progress in the world of IT and,
+    perhaps, to share a bit of my personal side as well. In addition, I want to
+    share with you, dear reader, that while my frustration may not be greater
+    than my determination, I promise, with complete confidence, that I will
+    achieve my goal of working in what I truly love.
+  </p>
+  -->
 
   <p>
-      Here I am, after a lot of procrastination, frustration, attempts, and
-      disappointments (though not romantic ones), diving into what has been, up
-      until now, my unfulfilled dream of becoming a programmer. I’ve decided to
-      create this personal blog to document my progress in the world of IT and,
-      perhaps, to share a bit of my personal side as well. In addition, I want
-      to share with you, dear reader, that while my frustration may not be
-      greater than my determination, I promise, with complete confidence, that I
-      will achieve my goal of working in what I truly love.
+    Hola, soy Miguel Páez, un apasionado de la tecnología. Este blog nació con
+    la idea de compartir mis pensamientos, ideas y, especialmente, mis
+    experiencias sobre acontecimientos personales, vivencias y comentarios de
+    todo tipo.
   </p>
 
   <p>
-    "La vida es una comedia para quienes piensan y una tragedia para quienes
-    sienten"
+    Aquí estoy, después de mucha procrastinación, frustración, intentos y
+    decepciones (aunque no de tipo romántico), sumergiéndome en lo que ha sido,
+    hasta ahora, mi sueño no cumplido de convertirme en programador.
   </p>
+
   <p>
-    Maybe the translation is: Life is a comedy for those who think and a tragedy
-    for those who feel.
+    Mis publicaciones son casuales y directas, pero siempre trato de ofrecer una
+    perspectiva única sobre los temas que trato (aunque tal vez alejadas de la
+    verdad absoluta). Me encanta mantener un tono cercano y accesible, porque
+    creo que el conocimiento y la diversión pueden ir de la mano.
   </p>
+
   <p>He aquí algunos datos sobre mí:</p>
   <ul>
     <li>Me llamo {identity.firstName}.</li>
     <li>
-      Vivo en {identity.country}
+      Vivo en {identity.country}.
       {secondStatus && <span> y soy</span>}
       {status && <span> y estoy</span>}
-      {identity.occupation}.
+      {status && identity.occupation}
     </li>
     {
       identity.hobbies.length >= 2 && (
@@ -68,7 +81,7 @@ const textCase = "uppercase";
       )
     }
   </ul>
-<p>Mis habilidades son:</p>
+  <p>Mis habilidades son:</p>
   <ul>
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>

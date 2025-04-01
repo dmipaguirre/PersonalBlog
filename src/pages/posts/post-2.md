@@ -6,7 +6,7 @@ author: Duban Páez
 image:
   url: ""
   alt: ""
-pubDate: Pending
+pubDate: Fecha pendiente
 tags: ["pendiente", "pendiente", "pendiente", "éxitos"]
 ---
 

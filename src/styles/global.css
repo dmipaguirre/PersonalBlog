@@ -117,3 +117,10 @@ h1 {
     display: none;
   }
 }
+
+.container-section {
+  margin-top: 35px;
+  border-left: 10px solid #6e706e63;
+  padding: 14px;
+  background-color: rgba(95, 95, 95, 0.164)
+}

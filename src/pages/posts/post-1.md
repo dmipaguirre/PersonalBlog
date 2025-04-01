@@ -1,13 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Mi primera publicación en el blog"
-description: "También, el primer inicio"
-author: "Duban Páez"
+description: "También, el primer inicio."
+author: "Duban Miguel Páez"
 image:
   url: ""
   alt: ""
-pubDate: 2025-03-25
-tags: ["astro", "bloguear", "aprender en público"]
+pubDate: 2025-04-01
+tags: ["primero", "bloguear", "expresar en público"]
 ---
 
 ¡Bienvenido a mi _nuevo blog_! Aquí, compartiré un viaje de aprendizajes, anéctodas y diario vivir, a medida que construyo un nuevo sitio web.

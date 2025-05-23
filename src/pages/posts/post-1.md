@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Mi primera publicación en el blog"
+title: "El comienzo de este blog"
 description: "Regresando al pasado"
 author: "Duban Miguel Páez"
 image:

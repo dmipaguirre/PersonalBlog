@@ -1,6 +1,9 @@
 ---
 const { title, url } = Astro.props;
 ---
+  <!--
+  Este componente se encarga de mostrar un enlace a una publicación del blog.
+  -->
 
 <style>
   li {
@@ -12,6 +15,7 @@ const { title, url } = Astro.props;
     position: relative;
     padding-bottom: 2px;
   }
+  /* Efecto de subrayado */
   a::after {
     content: ""; /* Crea un elemento visual */
     position: absolute;
@@ -22,9 +26,12 @@ const { title, url } = Astro.props;
     background-color: aliceblue; /* Color de la línea */
     transition: width 0.3s ease-in-out; /* Efecto de animación */
   }
+  /* Al pasar el mouse, se expande el subrayado */
   a:hover::after {
     width: 100%; /* Se expande al pasar el mouse */
   }
 </style>
+
+<!-- Componente para mostrar un enlace a una publicación del blog -->
 
 <li><a href={url}>{title}</a></li>

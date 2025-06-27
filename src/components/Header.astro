@@ -9,13 +9,13 @@ const isHome = Astro.url.pathname === "/";
 <style>
   nav {
     margin-bottom: 3rem;
+    position: relative;
   }
 </style>
 
 <header>
   <nav>
     <Hamburger />
-
     <Navigation />
     {isHome && <Avatar />}
   </nav>

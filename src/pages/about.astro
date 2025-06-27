@@ -7,7 +7,7 @@ const identity = {
   firstName: "Duban Miguel Páez",
   country: "Alemania",
   occupation: "buscando empleo",
-  hobbies: ["leer", "montar largos trayectos en bicicleta", "videojuegos"],
+  hobbies: ["leer", "mtb", "videojuegos"],
 };
 
 const skills = ["HTML", "CSS", "JavaScript", "Python", "Astro"];
@@ -42,47 +42,53 @@ const textCase = "uppercase";
     achieve my goal of working in what I truly love.
   </p>
   -->
+  <main class="main-section">
+    <section class="section">
+      <p>
+        Hola, soy Miguel Páez, un apasionado de la tecnología. Este blog nació
+        con la intención de compartir mis pensamientos, ideas y, especialmente,
+        mis experiencias personales: vivencias, comentarios y reflexiones de
+        todo tipo.
+      </p>
 
-  <p>
-    Hola, soy Miguel Páez, un apasionado de la tecnología. Este blog nació con
-    la intención de compartir mis pensamientos, ideas y, especialmente, mis
-    experiencias personales: vivencias, comentarios y reflexiones de todo tipo.
-  </p>
+      <p>
+        Estoy aquí, después de mucha procrastinación, frustraciones, intentos
+        fallidos y algunas decepciones (aunque no románticas), sumergido en lo
+        que ha sido, hasta ahora, mi sueño no cumplido: convertirme en
+        programador.
+      </p>
 
-  <p>
-    Estoy aquí, después de mucha procrastinación, frustraciones, intentos
-    fallidos y algunas decepciones (aunque no románticas), sumergido en lo que
-    ha sido, hasta ahora, mi sueño no cumplido: convertirme en programador.
-  </p>
-
-  <p>
-    Mis publicaciones son casuales y directas, pero siempre intento ofrecer una
-    perspectiva personal (quizás no la verdad absoluta, pero sí honesta) sobre
-    los temas que me interesan. Me gusta mantener un tono cercano y accesible,
-    porque creo firmemente que el conocimiento y la diversión pueden ir de la
-    mano.
-  </p>
-
-  <p>Algunos datos sobre mí:</p>
-  <ul>
-    <li>Me llamo {identity.firstName}.</li>
-    <li>
-      Vivo en {identity.country}.
-      {secondStatus && <span> y soy</span>}
-      {status && <span> y estoy</span>}
-      {status && identity.occupation}
-    </li>
-    {
-      identity.hobbies.length >= 2 && (
+      <p>
+        Mis publicaciones son casuales y directas, pero siempre intento ofrecer
+        una perspectiva personal (quizás no la verdad absoluta, pero sí honesta)
+        sobre los temas que me interesan. Me gusta mantener un tono cercano y
+        accesible, porque creo firmemente que el conocimiento y la diversión
+        pueden ir de la mano.
+      </p>
+    </section>
+    <section class="section item">
+      <p>Algunos datos sobre mí:</p>
+      <ul>
+        <li>Me llamo {identity.firstName}.</li>
         <li>
-          Dos de mis aficiones son: {identity.hobbies[0]} y{" "}
-          {identity.hobbies[1]}
+          Vivo en {identity.country}.
+          {secondStatus && <span> y soy</span>}
+          {status && <span> y estoy</span>}
+          {status && identity.occupation}
         </li>
-      )
-    }
-  </ul>
-  <p>Tecnologías que manejo:</p>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
+        {
+          identity.hobbies.length >= 2 && (
+            <li>
+              Dos de mis aficiones son: {identity.hobbies[0]} y{" "}
+              {identity.hobbies[1]}
+            </li>
+          )
+        }
+      </ul>
+      <p>Tecnologías que manejo:</p>
+      <ul>
+        {skills.map((skill) => <li class="skill">{skill}</li>)}
+      </ul>
+    </section>
+  </main>
 </BaseLayout>

@@ -1,25 +1,30 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Un intento de desarrollador...";
+const pageTitle = "Un intento de desarrollador";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>
-    🚀 Este sitio está en constante evolución. ¡Un poco de paciencia, por favor!
-  </h2>
-  <p>
-    Hace tiempo que quería construir mi propio blog personal para compartir
-    algunos de mis escritos. ¡Y aquí estamos! Le doy la bienvenida a este
-    espacio. Si disfruta del chisme, este es el lugar perfecto para usted.
-  </p>
-  <section class="container-section">
+  <main class="main-section">
+    <section class="section">
+    <h2>
+      Este sitio está en constante evolución. ¡Un poco de paciencia, por favor!
+    </h2>
     <p>
-      "La vida es una comedia para quienes piensan y una tragedia para quienes
-      sienten"
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt dicta,
+      neque repellendus ipsam, assumenda consequuntur doloremque quidem deleniti
+      officia quas, molestiae tempore? Nemo animi voluptatibus, debitis
+      perspiciatis porro placeat dolorum.
     </p>
-    <p>
-      Maybe the translation is: Life is a comedy for those who think and a
-      tragedy for those who feel.
-    </p>
-  </section>
+    </section>
+    <section class="section-quote">
+      <p>
+        "La vida es una comedia para quienes piensan y una tragedia para quienes
+        sienten"
+      </p>
+      <p>
+        Maybe the translation is: Life is a comedy for those who think and a
+        tragedy for those who feel.
+      </p>
+    </section>
+  </main>
 </BaseLayout>
